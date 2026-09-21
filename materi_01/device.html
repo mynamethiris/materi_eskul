@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Inspect Element</title>
+  <meta name="description" content="Tantangan 07: pakai Device Toolbar, coba Desktop Tablet Mobile dan portrait landscape.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='black'/><path d='M50 28L80 72H20Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var m=location.search.match(/[?&]theme=(dark|light)/);var t=m?m[1]:null;if(!t){try{t=localStorage.getItem("mi-theme")}catch(e){}if(t!=="dark"&&t!=="light"){try{var c=document.cookie.match(/(?:^|; )mi-theme=(dark|light)/);t=c?c[1]:null}catch(e){t=null}}}if(!t&&matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}if(m){try{localStorage.setItem("mi-theme",m[1])}catch(e){}try{document.cookie="mi-theme="+m[1]+"; max-age=31536000; path=/"}catch(e){}}}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> materi-inspect <small>/ docs</small></a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html"><span aria-hidden="true">←</span> Semua materi</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap">◐</button>
+      </div>
+    </div>
+  </header>
+  <main id="konten">
+    <div class="page">
+      <div class="docs-layout">
+        <aside class="docs-sidebar" aria-label="Daftar tantangan">
+          <p class="group">Tantangan urut mudah</p>
+          <a class="side-link" href="edit.html">01: Judul dan Deskripsi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="hidden.html">02: Elemen Tersembunyi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="disabled.html">03: Disabled Button <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="console.html">04: Pesan Console <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="style.html">05: Style CSS <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="modal.html">06: Modal Terkunci <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="device.html" aria-current="page">07: Device / Orientasi <span aria-hidden="true">✓</span></a>
+          <a class="side-link" href="login.html">08: Login Rahasia <span aria-hidden="true">→</span></a>
+          <p class="group">Bantuan</p>
+          <a class="side-link" href="index.html">Kembali ke ringkasan</a>
+          <a class="side-link" href="../index.html"><span>← Semua materi</span></a>
+        </aside>
+        <div class="docs-content prose-narrow">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Semua materi</a><span aria-hidden="true">/</span><a href="index.html">Ringkasan</a><span aria-hidden="true">/</span><span>07 Device dan Orientasi</span></nav>
+          <span class="badge badge-outline">Tantangan 07, lanjut</span>
+          <h1 class="page-title">Simulasi Device dan Orientasi Layar</h1>
+          <p class="lead">Aktifkan Device Toolbar, coba tiap ukuran layar. Tiap tampilan punya pesan khusus, dan halaman mencatat yang sudah dikunjungi.</p>
+          <div id="device-success" class="success" role="status" aria-live="polite">Tuntas! Kamu sudah mencoba Desktop, Tablet, dan Mobile, plus memahami perbedaan portrait dan landscape. Ini cara desainer menguji responsif.</div>
+          <div class="steps" aria-label="Langkah pengerjaan">
+            <ol>
+              <li><span class="step-num">?</span><p>Ada mode di DevTools yang membuat layar seolah-olah menjadi HP. Ikonnya seperti ponsel dan tablet. Bisakah kamu menemukannya?</p></li>
+              <li><span class="step-num">?</span><p>Dalam mode itu, ganti-ganti ukuran layar. Perhatikan kartu “Status Layar” dan pesan khusus yang berganti. Ada berapa pesan berbeda?</p></li>
+              <li><span class="step-num">?</span><p>Temukan juga tombol putar untuk portrait dan landscape. Apa yang berubah selain lebar?</p></li>
+            </ol>
+          </div>
+          <div class="card" aria-live="polite">
+            <div class="card-top"><h2>Status Layar Saat Ini</h2><span class="meta-pill" id="device-size">mengukur...</span></div>
+            <p>Lebar: <code id="device-width">-</code> , orientasi: <code id="device-orient">-</code></p>
+            <div class="card-meta">
+              <span class="meta-pill" id="check-desktop">Desktop: belum</span>
+              <span class="meta-pill" id="check-tablet">Tablet: belum</span>
+              <span class="meta-pill" id="check-mobile">Mobile: belum</span>
+            </div>
+          </div>
+          <div class="alert" id="msg-desktop">
+            <span class="alert-icon" aria-hidden="true">D</span>
+            <div><h4>Pesan khusus Desktop</h4><p>Kamu di layar lebar 1024px ke atas. Tata letak penuh terlihat. Sekarang sempitkan ke tablet.</p></div>
+          </div>
+          <div class="alert" id="msg-tablet" style="display:none">
+            <span class="alert-icon" aria-hidden="true">T</span>
+            <div><h4>Pesan khusus Tablet</h4><p>Kamu di 640 sampai 1023px. Sidebar menumpuk, kartu menyusun ulang. Lanjut ke mobile 390px.</p></div>
+          </div>
+          <div class="alert" id="msg-mobile" style="display:none">
+            <span class="alert-icon" aria-hidden="true">M</span>
+            <div><h4>Pesan khusus Mobile</h4><p>Kamu di bawah 640px. Menu jadi tombol, tombol jadi penuh. Coba putar ke landscape untuk melihat bedanya.</p></div>
+          </div>
+          <div class="tip-row">
+            <button class="btn btn-secondary" id="device-reset" type="button">Ulangi kunjungan</button>
+            <p class="caption" id="device-hint">Kunjungi Desktop, Tablet, dan Mobile untuk tuntas.</p>
+          </div>
+          <details class="hint-details">
+            <summary>Butuh petunjuk kecil? Buka perlahan</summary>
+            <div class="hint-body">
+              <p><span class="hint-level">Petunjuk 1, arah</span><br>Tekan <kbd>Ctrl+Shift+M</kbd> untuk Device Toolbar, lalu pilih device seperti iPhone SE.</p>
+              <p><span class="hint-level">Petunjuk 2, cara</span><br>Ubah lebar melewati 640 dan 1024, lalu tekan ikon putar untuk landscape. Checklist akan tercentang satu per satu.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/device.js"></script>
+</body>
+</html>

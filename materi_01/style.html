@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Inspect Element</title>
+  <meta name="description" content="Tantangan 05: ubah warna #style-box lewat panel Styles.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='black'/><path d='M50 28L80 72H20Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var m=location.search.match(/[?&]theme=(dark|light)/);var t=m?m[1]:null;if(!t){try{t=localStorage.getItem("mi-theme")}catch(e){}if(t!=="dark"&&t!=="light"){try{var c=document.cookie.match(/(?:^|; )mi-theme=(dark|light)/);t=c?c[1]:null}catch(e){t=null}}}if(!t&&matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}if(m){try{localStorage.setItem("mi-theme",m[1])}catch(e){}try{document.cookie="mi-theme="+m[1]+"; max-age=31536000; path=/"}catch(e){}}}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> materi-inspect <small>/ docs</small></a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html"><span aria-hidden="true">←</span> Semua materi</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap">◐</button>
+      </div>
+    </div>
+  </header>
+  <main id="konten">
+    <div class="page">
+      <div class="docs-layout">
+        <aside class="docs-sidebar" aria-label="Daftar tantangan">
+          <p class="group">Tantangan urut mudah</p>
+          <a class="side-link" href="edit.html">01: Judul dan Deskripsi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="hidden.html">02: Elemen Tersembunyi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="disabled.html">03: Disabled Button <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="console.html">04: Pesan Console <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="style.html" aria-current="page">05: Style CSS <span aria-hidden="true">✓</span></a>
+          <a class="side-link" href="modal.html">06: Modal Terkunci <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="device.html">07: Device / Orientasi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="login.html">08: Login Rahasia <span aria-hidden="true">→</span></a>
+          <p class="group">Bantuan</p>
+          <a class="side-link" href="index.html">Kembali ke ringkasan</a>
+          <a class="side-link" href="../index.html"><span>← Semua materi</span></a>
+        </aside>
+        <div class="docs-content prose-narrow">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Semua materi</a><span aria-hidden="true">/</span><a href="index.html">Ringkasan</a><span aria-hidden="true">/</span><span>05 Style CSS</span></nav>
+          <span class="badge badge-outline">Tantangan 05, menengah</span>
+          <h1 class="page-title">Ubah Style CSS</h1>
+          <p class="lead">Kotak di bawah berwarna biru, padahal seharusnya hijau. Cari tahu properti CSS mana yang mengatur warnanya.</p>
+          <div id="style-success" class="success" role="status" aria-live="polite">Warna berhasil diubah ke hijau! Kamu paham cara mengutak-atik CSS lewat panel Styles tanpa menyentuh file.</div>
+          <div class="steps" aria-label="Langkah pengerjaan">
+            <ol>
+              <li><span class="step-num">?</span><p>Inspect kotak biru <code>#style-box</code>. Di panel Styles, properti apa yang menentukan warna latarnya?</p></li>
+              <li><span class="step-num">?</span><p>Hijau yang diminta sudah ditunjukkan oleh indikator di badge? Bukan. Warna targetnya tertulis di “Tujuan” di bawah. Bagaimana cara mengetik nilai warna baru di Styles?</p></li>
+              <li><span class="step-num">?</span><p>Perhatikan petunjuk warna live: ia berubah mengikuti eksperimenmu. Kapan pesan sukses muncul?</p></li>
+            </ol>
+          </div>
+          <div class="target-box">
+            <p class="caption">Tujuan: latar kotak harus menjadi hijau #16a34a</p>
+            <div id="style-box" style="background-color: #3b82f6; color: #fff; border-radius: 8px; padding: 1.2rem; font-weight: 700;">Kotak biru, ubah saya jadi hijau</div>
+            <p class="caption" id="style-hint" aria-live="polite" style="margin-top:.6rem">Warna saat ini terdeteksi: memeriksa...</p>
+          </div>
+          <div class="tip-row">
+            <button class="btn btn-secondary" id="style-reset" type="button">Kembalikan biru</button>
+            <p class="caption">Untuk mengulang latihan.</p>
+          </div>
+          <details class="hint-details">
+            <summary>Butuh petunjuk kecil? Buka perlahan</summary>
+            <div class="hint-body">
+              <p><span class="hint-level">Petunjuk 1, arah</span><br>Propertinya <code>background-color</code>. Klik nilainya di panel Styles.</p>
+              <p><span class="hint-level">Petunjuk 2, cara</span><br>Ketik <code>#16a34a</code> lalu tekan Enter.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/style.js"></script>
+</body>
+</html>

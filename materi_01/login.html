@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Inspect Element</title>
+  <meta name="description" content="Tantangan 08: temukan kredensial di class hidden-data lalu isi form.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='black'/><path d='M50 28L80 72H20Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var m=location.search.match(/[?&]theme=(dark|light)/);var t=m?m[1]:null;if(!t){try{t=localStorage.getItem("mi-theme")}catch(e){}if(t!=="dark"&&t!=="light"){try{var c=document.cookie.match(/(?:^|; )mi-theme=(dark|light)/);t=c?c[1]:null}catch(e){t=null}}}if(!t&&matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}if(m){try{localStorage.setItem("mi-theme",m[1])}catch(e){}try{document.cookie="mi-theme="+m[1]+"; max-age=31536000; path=/"}catch(e){}}}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> materi-inspect <small>/ docs</small></a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html"><span aria-hidden="true">←</span> Semua materi</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="konten">
+    <div class="page">
+      <div class="docs-layout">
+        <aside class="docs-sidebar" aria-label="Daftar tantangan">
+          <p class="group">Tantangan urut mudah</p>
+          <a class="side-link" href="edit.html">01: Judul dan Deskripsi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="hidden.html">02: Elemen Tersembunyi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="disabled.html">03: Disabled Button <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="console.html">04: Pesan Console <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="style.html">05: Style CSS <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="modal.html">06: Modal Terkunci <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="device.html">07: Device / Orientasi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="login.html" aria-current="page">08: Login Rahasia <span aria-hidden="true">✓</span></a>
+          <p class="group">Bantuan</p>
+          <a class="side-link" href="index.html">Kembali ke ringkasan</a>
+          <a class="side-link" href="../index.html"><span>← Semua materi</span></a>
+        </aside>
+
+        <div class="docs-content prose-narrow">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Semua materi</a><span aria-hidden="true">/</span><a href="index.html">Ringkasan</a><span aria-hidden="true">/</span><span>08 Login Rahasia</span></nav>
+          <span class="badge badge-outline">Tantangan 08, paling sulit</span>
+          <h1 class="page-title">Login Rahasia</h1>
+          <p class="lead">Halaman login ini palsu. Kredensialnya tersimpan langsung di HTML, bukan di server. Tugasmu menemukannya.</p>
+
+          <div id="login-success" class="success" role="status" aria-live="polite">Benar. Kamu menuntaskan tantangan 08 sekaligus seluruh seri. Kamu menemukan data tersembunyi dan paham bahaya kredensial di HTML.</div>
+          <div id="login-error" class="error" role="alert">Kurang tepat. Cari lagi di panel Elements.</div>
+
+          <div class="steps" aria-label="Langkah pengerjaan">
+            <ol>
+              <li><span class="step-num">?</span><p>Form ini memeriksa jawaban langsung di browser, bukan ke server. Berarti jawabannya pasti tersimpan di halaman ini. Di mana biasanya data seperti itu disembunyikan?</p></li>
+              <li><span class="step-num">?</span><p>Jelajahi Elements di sekitar form. Ada elemen yang tidak tampil di layar. Atribut apa saja yang menempel padanya?</p></li>
+              <li><span class="step-num">?</span><p>Dua atribut menyimpan dua jawaban. Salin keduanya persis ke form, perhatikan huruf besar dan kecil.</p></li>
+            </ol>
+          </div>
+
+          <div id="account-data" class="hidden-data account-data" data-username="admin" data-password="supersecret123">dXNlcm5hbWU6YWRtaW4KcGFzc3dvcmQ6c3VwZXJzZWNyZXQxMjMK</div>
+
+          <section class="card form-card" aria-labelledby="form-title">
+            <div class="card-top"><h2 id="form-title">Masuk</h2><span class="meta-pill">form demo</span></div>
+            <p>Data hanya diperiksa di browser. Tidak ada yang dikirim ke mana pun.</p>
+            <form id="login-form" novalidate>
+              <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Lacak di Elements" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Lacak di Elements" autocomplete="off" required>
+              </div>
+              <button class="btn btn-primary" type="submit" style="width:100%">Periksa jawaban</button>
+              <p class="caption" id="form-hint" aria-live="polite" style="margin-top:.6rem">Isi kedua kolom, lalu tekan Periksa jawaban.</p>
+            </form>
+          </section>
+          <details class="hint-details">
+            <summary>Butuh petunjuk kecil? Buka perlahan</summary>
+            <div class="hint-body">
+              <p><span class="hint-level">Petunjuk 1, arah</span><br>Cari elemen dengan <code>class="hidden-data"</code> memakai pencarian di Elements.</p>
+              <p><span class="hint-level">Petunjuk 2, cara</span><br>Baca <code>data-username</code> dan <code>data-password</code>, salin ke form.</p>
+            </div>
+          </details>
+
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">!</span>
+            <div><h4>Pelajaran</h4><p>Jangan simpan kredensial di HTML. Semua orang bisa membacanya lewat Inspect Element. Simpan di server.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/theme.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

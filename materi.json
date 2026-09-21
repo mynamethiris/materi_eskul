@@ -1,0 +1,11 @@
+{
+  "materi": [
+    {
+      "slug": "materi_01",
+      "href": "materi_01/index.html",
+      "title": "Belajar Inspect Element dengan cara praktik langsung",
+      "description": "8 tantangan Inspect Element urut dari mudah: ubah teks, elemen tersembunyi, disabled button, console, CSS, modal, device, login.",
+      "badge": "8 tantangan"
+    }
+  ]
+}

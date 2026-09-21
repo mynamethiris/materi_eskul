@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Inspect Element</title>
+  <meta name="description" content="8 tantangan Inspect Element urut dari mudah: ubah teks, elemen tersembunyi, disabled button, console, CSS, modal, device, login.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='black'/><path d='M50 28L80 72H20Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var m=location.search.match(/[?&]theme=(dark|light)/);var t=m?m[1]:null;if(!t){try{t=localStorage.getItem("mi-theme")}catch(e){}if(t!=="dark"&&t!=="light"){try{var c=document.cookie.match(/(?:^|; )mi-theme=(dark|light)/);t=c?c[1]:null}catch(e){t=null}}}if(!t&&matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}if(m){try{localStorage.setItem("mi-theme",m[1])}catch(e){}try{document.cookie="mi-theme="+m[1]+"; max-age=31536000; path=/"}catch(e){}}}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="materi-inspect beranda">
+        <span class="brand-mark">&lt;/&gt;</span>
+        materi-inspect <small>/ docs</small>
+      </a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html"><span aria-hidden="true">←</span> Semua materi</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap">◐</button>
+      </div>
+    </div>
+  </header>
+  <main id="konten">
+    <div class="page">
+      <div class="hero-grid">
+        <div class="hero">
+          <span class="badge"><span class="dot" aria-hidden="true"></span> 8 tantangan urut dari mudah</span>
+          <h1 class="page-title">Belajar Inspect Element dengan cara praktik langsung.</h1>
+          <p class="lead">Delapan tantangan pendek dari mengubah teks sampai login rahasia. Buka DevTools, ikuti langkah di tiap halaman, tiap tampilan punya pesan sukses khusus. Tidak ada nilai yang dikirim ke server.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="edit.html">Mulai dari 01 Ubah Judul</a>
+            <a class="btn btn-secondary" href="login.html">Lompat ke 08 Login</a>
+          </div>
+          <p class="caption" style="margin-top:1rem">Waktu tiap tantangan sekitar 5 menit. Kerjakan berurutan 01 sampai 08.</p>
+        </div>
+        <div>
+          <div class="code-block" aria-label="Contoh shortcut DevTools"><span class="dim">// shortcut yang dipakai di materi ini</span><br>Ctrl + Shift + I <span class="dim">→ buka DevTools</span><br>Ctrl + Shift + M <span class="dim">→ device toolbar</span><br>Ctrl + F <span class="dim">→ cari di panel Elements</span></div>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Perubahan hanya lokal</h4><p>Semua yang diubah lewat Inspect Element hilang saat refresh. Itu bagian dari pelajarannya.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-2" id="challenge-grid">
+        <article class="card" data-title="01 ubah judul deskripsi saya berhasil target-title">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 01</span><span class="meta-pill">paling mudah</span></div>
+          <h2>Ubah Judul dan Deskripsi</h2>
+          <p>Dua teks terlihat “lama”. Pikirkan: lewat panel apa teks HTML bisa diubah langsung?</p>
+          <div class="card-meta"><span class="meta-pill">Elements</span><span class="meta-pill">teks</span></div>
+          <div class="card-footer"><a class="card-link" href="edit.html">Buka tantangan</a><kbd>edit.html</kbd></div>
+        </article>
+        <article class="card" data-title="02 munculkan elemen tersembunyi secret-box display none">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 02</span><span class="meta-pill">mudah</span></div>
+          <h2>Munculkan Elemen Tersembunyi</h2>
+          <p>Ada kotak hadiah yang tidak terlihat. Pikirkan: bagaimana elemen bisa ada tapi tidak tampil?</p>
+          <div class="card-meta"><span class="meta-pill">Elements</span><span class="meta-pill">display</span></div>
+          <div class="card-footer"><a class="card-link" href="hidden.html">Buka tantangan</a><kbd>hidden.html</kbd></div>
+        </article>
+        <article class="card" data-title="03 bypass disabled button klaim hadiah">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 03</span><span class="meta-pill">mudah</span></div>
+          <h2>Bypass Disabled Button</h2>
+          <p>Tombol terlihat tapi tidak bisa diklik. Pikirkan: atribut apa yang menguncinya?</p>
+          <div class="card-meta"><span class="meta-pill">Elements</span><span class="meta-pill">atribut</span></div>
+          <div class="card-footer"><a class="card-link" href="disabled.html">Buka tantangan</a><kbd>disabled.html</kbd></div>
+        </article>
+        <article class="card" data-title="04 intip pesan console kode rahasia">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 04</span><span class="meta-pill">menengah</span></div>
+          <h2>Intip Pesan Console</h2>
+          <p>Halaman membisikkan sesuatu ke tempat selain Elements. Pikirkan: tab apa yang menampung log JavaScript?</p>
+          <div class="card-meta"><span class="meta-pill">Console</span><span class="meta-pill">form</span></div>
+          <div class="card-footer"><a class="card-link" href="console.html">Buka tantangan</a><kbd>console.html</kbd></div>
+        </article>
+        <article class="card" data-title="05 ubah style css warna styles hijau">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 05</span><span class="meta-pill">menengah</span></div>
+          <h2>Ubah Style CSS</h2>
+          <p>Kotak biru seharusnya hijau. Pikirkan: properti CSS apa yang mengatur warna latar?</p>
+          <div class="card-meta"><span class="meta-pill">Styles</span><span class="meta-pill">CSS</span></div>
+          <div class="card-footer"><a class="card-link" href="style.html">Buka tantangan</a><kbd>style.html</kbd></div>
+        </article>
+        <article class="card" data-title="06 buka modal terkunci locked-modal">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 06</span><span class="meta-pill">menengah+</span></div>
+          <h2>Buka Modal Terkunci</h2>
+          <p>Modal ada tapi tanpa tombol pembuka. Pikirkan: apa kesamaannya dengan elemen tersembunyi?</p>
+          <div class="card-meta"><span class="meta-pill">Elements</span><span class="meta-pill">modal</span></div>
+          <div class="card-footer"><a class="card-link" href="modal.html">Buka tantangan</a><kbd>modal.html</kbd></div>
+        </article>
+        <article class="card" data-title="07 simulasi device orientasi layar mobile tablet desktop">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 07</span><span class="meta-pill">lanjut</span></div>
+          <h2>Simulasi Device dan Orientasi Layar</h2>
+          <p>Tiap ukuran layar menyimpan pesan berbeda. Pikirkan: mode apa yang membuat layar jadi seolah HP?</p>
+          <div class="card-meta"><span class="meta-pill">Device Toolbar</span><span class="meta-pill">responsif</span></div>
+          <div class="card-footer"><a class="card-link" href="device.html">Buka tantangan</a><kbd>device.html</kbd></div>
+        </article>
+        <article class="card" data-title="08 login rahasia hidden-data kredensial admin">
+          <div class="card-top"><span class="badge badge-outline">Tantangan 08</span><span class="meta-pill">paling sulit</span></div>
+          <h2>Login Rahasia</h2>
+          <p>Form memeriksa jawaban di browser, bukan server. Pikirkan: di mana jawabannya disembunyikan?</p>
+          <div class="card-meta"><span class="meta-pill">Elements</span><span class="meta-pill">data-*</span><span class="meta-pill">form</span></div>
+          <div class="card-footer"><a class="card-link" href="login.html">Buka tantangan</a><kbd>login.html</kbd></div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+</body>
+</html>

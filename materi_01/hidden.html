@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Inspect Element</title>
+  <meta name="description" content="Tantangan 02: munculkan #secret-box yang disembunyikan lewat Inspect Element.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='black'/><path d='M50 28L80 72H20Z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var m=location.search.match(/[?&]theme=(dark|light)/);var t=m?m[1]:null;if(!t){try{t=localStorage.getItem("mi-theme")}catch(e){}if(t!=="dark"&&t!=="light"){try{var c=document.cookie.match(/(?:^|; )mi-theme=(dark|light)/);t=c?c[1]:null}catch(e){t=null}}}if(!t&&matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}if(m){try{localStorage.setItem("mi-theme",m[1])}catch(e){}try{document.cookie="mi-theme="+m[1]+"; max-age=31536000; path=/"}catch(e){}}}catch(e){}})();</script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> materi-inspect <small>/ docs</small></a>
+      <div class="header-actions">
+        <a class="header-back" href="../index.html"><span aria-hidden="true">←</span> Semua materi</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang atau gelap">◐</button>
+      </div>
+    </div>
+  </header>
+  <main id="konten">
+    <div class="page">
+      <div class="docs-layout">
+        <aside class="docs-sidebar" aria-label="Daftar tantangan">
+          <p class="group">Tantangan urut mudah</p>
+          <a class="side-link" href="edit.html">01: Judul dan Deskripsi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="hidden.html" aria-current="page">02: Elemen Tersembunyi <span aria-hidden="true">✓</span></a>
+          <a class="side-link" href="disabled.html">03: Disabled Button <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="console.html">04: Pesan Console <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="style.html">05: Style CSS <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="modal.html">06: Modal Terkunci <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="device.html">07: Device / Orientasi <span aria-hidden="true">→</span></a>
+          <a class="side-link" href="login.html">08: Login Rahasia <span aria-hidden="true">→</span></a>
+          <p class="group">Bantuan</p>
+          <a class="side-link" href="index.html">Kembali ke ringkasan</a>
+          <a class="side-link" href="../index.html"><span>← Semua materi</span></a>
+        </aside>
+        <div class="docs-content prose-narrow">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Semua materi</a><span aria-hidden="true">/</span><a href="index.html">Ringkasan</a><span aria-hidden="true">/</span><span>02 Elemen Tersembunyi</span></nav>
+          <span class="badge badge-outline">Tantangan 02, mudah</span>
+          <h1 class="page-title">Munculkan Elemen Tersembunyi</h1>
+          <p class="lead">Ada kotak hadiah yang disembunyikan dengan <code>display: none</code>. Munculkan lewat panel Elements.</p>
+          <div id="hidden-success" class="success" role="status" aria-live="polite">Selamat! Kamu berhasil memunculkan elemen tersembunyi berisi kode HIDDEN-2026. Caranya: ubah display none menjadi block.</div>
+          <div class="steps" aria-label="Langkah pengerjaan">
+            <ol>
+              <li><span class="step-num">?</span><p>Ada kotak hadiah di halaman ini, tapi tidak terlihat. Menurutmu, bagaimana sebuah elemen bisa “ada di HTML tapi tidak tampil”?</p></li>
+              <li><span class="step-num">?</span><p>Cari elemen bernama <code>#secret-box</code> di Elements. Perhatikan baik-baik atribut di tag pembukanya. Ada yang janggal?</p></li>
+              <li><span class="step-num">?</span><p>Ubah bagian yang janggal itu sampai kotaknya menampakkan diri. Pesan sukses muncul kalau kamu benar.</p></li>
+            </ol>
+          </div>
+          <div class="target-box">
+            <p class="caption">Area target, kotak hadiah ada di bawah (sedang disembunyikan)</p>
+            <div id="secret-box" style="display: none; border: 1px solid hsl(var(--border)); border-radius: 8px; padding: 1rem; background: hsl(var(--background));">
+              <p style="font-weight:700">Kotak hadiah muncul!</p>
+              <p class="caption">Kode hadiah: <code>HIDDEN-2026</code></p>
+            </div>
+            <p class="caption" id="hidden-hint" aria-live="polite" style="margin-top:.6rem">Status: kotak masih tersembunyi.</p>
+          </div>
+          <div class="tip-row">
+            <button class="btn btn-secondary" id="hide-again" type="button">Sembunyikan lagi</button>
+            <p class="caption">Untuk mengulang latihan.</p>
+          </div>
+          <details class="hint-details">
+            <summary>Butuh petunjuk kecil? Buka perlahan</summary>
+            <div class="hint-body">
+              <p><span class="hint-level">Petunjuk 1, arah</span><br>Lihat nilai <code>display</code> pada gaya elemen itu. Nilai apa yang membuat elemen hilang total dari layar?</p>
+              <p><span class="hint-level">Petunjuk 2, cara</span><br>Ganti nilainya menjadi <code>block</code> lalu tekan Enter.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/hidden.js"></script>
+</body>
+</html>
