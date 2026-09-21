@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 07, lanjut</span>
           <h1 class="page-title">Simulasi Device dan Orientasi Layar</h1>
           <p class="lead">Aktifkan Device Toolbar, coba tiap ukuran layar. Tiap tampilan punya pesan khusus, dan halaman mencatat yang sudah dikunjungi.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: tampilan tiap layar</h4><p><strong>Masalah:</strong> tiap ukuran layar menyimpan pesan berbeda, checklist Desktop, Tablet, Mobile belum penuh.<br><strong>Yang dikerjakan:</strong> aktifkan mode simulasi layar HP di DevTools, ganti ukuran layar sampai pesan khusus berganti, lalu putar orientasi dan lihat apa yang berubah.<br>Situs yang bagus menata ulang tampilan mengikuti lebar layar. Posisi tegak disebut portrait, posisi miring disebut landscape.<br><strong>Kesalahan umum:</strong> hanya resize jendela tanpa mode device, belum coba putar orientasi, berhenti sebelum tiga checklist penuh.</p></div>
+          </div>
           <div id="device-success" class="success" role="status" aria-live="polite">Tuntas! Kamu sudah mencoba Desktop, Tablet, dan Mobile, plus memahami perbedaan portrait dan landscape. Ini cara desainer menguji responsif.</div>
+          <div id="explain-device" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: Device Toolbar dan breakpoint</h4><p><strong>Kode:</strong> Device Toolbar mengubah lebar layar: Desktop 1024px ke atas, Tablet 640 sampai 1023px, Mobile di bawah 640px.<br><strong>Masalah:</strong> tiap ukuran menyimpan pesan berbeda.<br><strong>Solusi:</strong> tekan <kbd>Ctrl+Shift+M</kbd>, ubah lebar melewati 640 dan 1024, tekan ikon putar untuk ganti orientasi.<br><strong>Kenapa penting:</strong> pengunjung banyak dari HP, jadi situs harus nyaman di layar kecil.<br><strong>Coba lagi:</strong> tekan Ulangi kunjungan, lalu penuhi tiga checklist tanpa hint.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Ada mode di DevTools yang membuat layar seolah-olah menjadi HP. Ikonnya seperti ponsel dan tablet. Bisakah kamu menemukannya?</p></li>

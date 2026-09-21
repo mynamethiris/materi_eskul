@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 06: Menengah+</span>
           <h1 class="page-title">Buka Modal Terkunci</h1>
           <p class="lead">Modal hadiah disembunyikan dan tidak ada tombol pembuka. Buka paksa lewat Elements.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: lapisan tersembunyi</h4><p><strong>Masalah:</strong> seharusnya ada modal hadiah tapi tidak kelihatan dan tidak ada tombol pembuka.<br><strong>Yang dikerjakan:</strong> cari lapisan yang hilang itu di panel Elements, bandingkan dengan trik sembunyi di tantangan 02, lalu tampilkan dengan caramu sampai kodenya kelihatan.<br>Modal itu lapisan di atas halaman, seperti kertas tempel.<br><strong>Kesalahan umum:</strong> cari tombol yang memang tidak ada, ubah modal yang salah, hanya tutup modal tanpa paham cara bukanya.</p></div>
+          </div>
           <div id="modal-success" class="success" role="status" aria-live="polite">Luar biasa! Kamu membuka modal terkunci tanpa tombol, langsung dari HTML. Isinya: MODAL-TERBUKA-2026.</div>
+          <div id="explain-modal" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: display pada modal</h4><p><strong>Kode:</strong> modal <code>#locked-modal</code> disembunyikan dengan <code>style="display: none"</code>. Analoginya seperti kertas tempel yang masih terlipat.<br><strong>Masalah:</strong> modal ada tapi tanpa tombol pembuka.<br><strong>Solusi:</strong> cari <code>#locked-modal</code>, hapus <code>style="display: none"</code> atau ubah <code>none</code> jadi <code>flex</code>.<br><strong>Kenapa penting:</strong> popup login dan iklan memakai pola lapisan yang sama.<br><strong>Coba lagi:</strong> tekan Sembunyikan modal lagi, lalu buka tanpa hint.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Seharusnya ada modal hadiah di halaman ini, tapi tidak ada tombol untuk membukanya. Di mana modal itu bersembunyi? Cari elemen bernama <code>#locked-modal</code>.</p></li>

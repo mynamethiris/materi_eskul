@@ -49,7 +49,16 @@
           <h1 class="page-title">Login Rahasia</h1>
           <p class="lead">Halaman login ini palsu. Kredensialnya tersimpan langsung di HTML, bukan di server. Tugasmu menemukannya.</p>
 
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: jawaban tersembunyi</h4><p><strong>Masalah:</strong> form memeriksa jawaban di browser, bukan ke server, jadi jawabannya pasti tertulis di halaman.<br><strong>Yang dikerjakan:</strong> jelajahi struktur di sekitar form, cari elemen yang tidak tampil di layar, baca info tambahan yang menempel padanya, salin dua jawaban persis ke form.<br>Tag HTML bisa menyimpan info yang tidak tampil, seperti catatan tempel di balik lukisan.<br><strong>Kesalahan umum:</strong> menebak isi form, salin kurang lengkap, salah huruf besar kecil.</p></div>
+          </div>
+
           <div id="login-success" class="success" role="status" aria-live="polite">Benar. Kamu menuntaskan tantangan 08 sekaligus seluruh seri. Kamu menemukan data tersembunyi dan paham bahaya kredensial di HTML.</div>
+          <div id="explain-login" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: class hidden-data dan data-*</h4><p><strong>Kode:</strong> <code>class="hidden-data"</code> menandai elemen yang disembunyikan, <code>data-username</code> dan <code>data-password</code> menyimpan jawaban di tag. Analoginya seperti catatan tempel di balik lukisan.<br><strong>Masalah:</strong> jawaban tertulis di halaman.<br><strong>Solusi:</strong> cari <code>hidden-data</code> di Elements, baca dua nilai <code>data-*</code>, salin persis ke form.<br><strong>Kenapa penting:</strong> password asli tidak boleh tertulis di HTML karena semua orang bisa membaca.<br><strong>Coba lagi:</strong> isi form salah sekali, lihat pesan error, lalu isi benar tanpa hint.</p></div>
+          </div>
           <div id="login-error" class="error" role="alert">Kurang tepat. Cari lagi di panel Elements.</div>
 
           <div class="steps" aria-label="Langkah pengerjaan">

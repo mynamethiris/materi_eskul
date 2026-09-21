@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const targetTitle = document.getElementById('target-title');
   const targetDesc = document.getElementById('target-desc');
   const successMessage = document.getElementById('success-message');
+  const explain = document.getElementById('explain-edit');
   const resetBtn = document.getElementById('reset-btn');
 
   if (!targetTitle || !targetDesc || !successMessage || !resetBtn) return;
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function check() {
     if (isDone()) {
       successMessage.style.display = 'block';
+      if (explain) explain.style.display = 'flex';
       targetTitle.style.color = 'hsl(var(--success))';
       targetDesc.style.color = 'hsl(var(--success))';
     }
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     targetTitle.style.color = '';
     targetDesc.style.color = '';
     successMessage.style.display = 'none';
+    if (explain) explain.style.display = 'none';
     alreadyShown = false;
   });
 });

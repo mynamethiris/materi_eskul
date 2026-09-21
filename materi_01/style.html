@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 05, menengah</span>
           <h1 class="page-title">Ubah Style CSS</h1>
           <p class="lead">Kotak di bawah berwarna biru, padahal seharusnya hijau. Cari tahu properti CSS mana yang mengatur warnanya.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: warna tampilan</h4><p><strong>Masalah:</strong> kotak masih biru, tujuan di bawah minta hijau.<br><strong>Yang dikerjakan:</strong> pilih kotaknya, buka panel yang menampilkan tampilannya, cari baris pengatur warna latar, ketik nilai hijau dari kotak Tujuan, tekan Enter.<br>CSS mengatur tampilan seperti warna, seperti cat pada rumah.<br><strong>Kesalahan umum:</strong> ubah teks bukan warna, ketik kode warna kurang lengkap, lupa tekan Enter.</p></div>
+          </div>
           <div id="style-success" class="success" role="status" aria-live="polite">Warna berhasil diubah ke hijau! Kamu paham cara mengutak-atik CSS lewat panel Styles tanpa menyentuh file.</div>
+          <div id="explain-style" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: background-color</h4><p><strong>Kode:</strong> <code>background-color</code> mengatur cat latar elemen. Analoginya seperti mengganti cat tembok satu ruangan.<br><strong>Masalah:</strong> kotak <code>#style-box</code> masih biru <code>#3b82f6</code>, tujuan minta hijau <code>#16a34a</code>.<br><strong>Solusi:</strong> pilih <code>#style-box</code>, klik nilai <code>background-color</code> di panel Styles, ketik <code>#16a34a</code>, tekan Enter.<br><strong>Kenapa penting:</strong> warna situs diatur terpusat lewat CSS jadi mudah diganti serentak.<br><strong>Coba lagi:</strong> tekan Kembalikan biru, lalu ubah ke hijau tanpa hint.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Inspect kotak biru <code>#style-box</code>. Di panel Styles, properti apa yang menentukan warna latarnya?</p></li>

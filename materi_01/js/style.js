@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const box = document.getElementById('style-box');
   const success = document.getElementById('style-success');
+  const explain = document.getElementById('explain-style');
   const hint = document.getElementById('style-hint');
   const resetBtn = document.getElementById('style-reset');
   let done = false;
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!done && isGreen(bg)) {
       done = true;
       success.style.display = 'block';
+      if (explain) explain.style.display = 'flex';
       box.textContent = 'Kotak hijau! Berhasil.';
       if (hint) hint.textContent = 'Warna saat ini terdeteksi: hijau #16a34a. Tepat!';
     } else if (!done && hint) {
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     box.style.backgroundColor = '#3b82f6';
     box.textContent = 'Kotak biru, ubah saya jadi hijau';
     success.style.display = 'none';
+    if (explain) explain.style.display = 'none';
     done = false;
   });
 });

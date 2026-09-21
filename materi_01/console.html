@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 04, menengah</span>
           <h1 class="page-title">Intip Pesan Console</h1>
           <p class="lead">Halaman ini mencetak kode rahasia ke tab Console. Buka Console, salin kodenya, isi form.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: pesan tersembunyi</h4><p><strong>Masalah:</strong> kode rahasia tidak tampil di halaman, halaman hanya meminta mengisi form.<br><strong>Yang dikerjakan:</strong> pindah ke panel lain selain Elements, cari baris yang ditandai sebagai kode rahasia, salin persis ke form dengan huruf besar dan tanda hubung yang sama.<br>DevTools punya beberapa panel, satu menampilkan struktur, satu menampilkan pesan dari JavaScript.<br><strong>Kesalahan umum:</strong> tetap di tab Elements, salin ada spasi depan belakang, salah huruf besar kecil.</p></div>
+          </div>
           <div id="console-success" class="success" role="status" aria-live="polite">Tepat! Kamu berhasil mengintip tab Console dan menemukan kode CONSOLE-2026. Tab Console berguna untuk debug JavaScript.</div>
+          <div id="explain-console" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: console.log dan tab Console</h4><p><strong>Kode:</strong> <code>console.log("pesan")</code> mencetak pesan ke tab Console. Analoginya seperti bisikan yang hanya terdengar di ruang khusus.<br><strong>Masalah:</strong> kode hanya ada di tab Console.<br><strong>Solusi:</strong> buka tab Console, cari baris <code>[TANTANGAN 04]</code>, salin kode <code>CONSOLE-....</code> ke form.<br><strong>Kenapa penting:</strong> programmer membaca pesan error lewat Console saat program gagal jalan.<br><strong>Coba lagi:</strong> refresh halaman agar log muncul lagi, lalu ulangi tanpa hint.</p></div>
+          </div>
           <div id="console-error" class="error" role="alert">Belum tepat. Buka tab Console di DevTools, cari baris KODE RAHASIA.</div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const box = document.getElementById('secret-box');
   const success = document.getElementById('hidden-success');
+  const explain = document.getElementById('explain-hidden');
   const hint = document.getElementById('hidden-hint');
   const hideBtn = document.getElementById('hide-again');
   let done = false;
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!done && isVisible()) {
       done = true;
       success.style.display = 'block';
+      if (explain) explain.style.display = 'flex';
       if (hint) hint.textContent = 'Status: kotak terlihat. Kerja bagus.';
     } else if (!done && hint) {
       hint.textContent = 'Status: kotak masih tersembunyi.';
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hideBtn) hideBtn.addEventListener('click', function() {
     box.style.display = 'none';
     success.style.display = 'none';
+    if (explain) explain.style.display = 'none';
     done = false;
   });
 });

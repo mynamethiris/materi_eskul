@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 02, mudah</span>
           <h1 class="page-title">Munculkan Elemen Tersembunyi</h1>
           <p class="lead">Ada kotak hadiah yang disembunyikan dengan <code>display: none</code>. Munculkan lewat panel Elements.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: tampil dan sembunyi</h4><p><strong>Masalah:</strong> kotak hadiah ada di halaman tapi tidak kelihatan.<br><strong>Yang dikerjakan:</strong> temukan kotak yang hilang itu di panel Elements, perhatikan bagian yang membuat tampilannya mati, lalu hidupkan lagi sampai kotaknya muncul.<br>Tampilan diatur CSS, ada kondisi yang membuat elemen tetap ada tapi tidak kelihatan, seperti barang yang ditutup kain.<br><strong>Kesalahan umum:</strong> hapus seluruh elemen bukan nilainya, ubah elemen yang salah, lupa tekan Enter.</p></div>
+          </div>
           <div id="hidden-success" class="success" role="status" aria-live="polite">Selamat! Kamu berhasil memunculkan elemen tersembunyi berisi kode HIDDEN-2026. Caranya: ubah display none menjadi block.</div>
+          <div id="explain-hidden" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: display none dan block</h4><p><strong>Kode:</strong> <code>style="display: none"</code> artinya elemen tetap ada tapi tidak tampil. <code>block</code> artinya tampil sebagai kotak penuh. Analoginya seperti membuka kain penutup.<br><strong>Masalah:</strong> kotak <code>#secret-box</code> tidak kelihatan.<br><strong>Solusi:</strong> cari <code>#secret-box</code>, ubah <code>none</code> jadi <code>block</code>, tekan Enter.<br><strong>Kenapa penting:</strong> menu dan banner sering disembunyikan dulu sebelum waktunya tampil.<br><strong>Coba lagi:</strong> tekan Sembunyikan lagi, lalu tampilkan tanpa melihat pembahasan.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Ada kotak hadiah di halaman ini, tapi tidak terlihat. Menurutmu, bagaimana sebuah elemen bisa “ada di HTML tapi tidak tampil”?</p></li>

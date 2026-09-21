@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const msgT = document.getElementById('msg-tablet');
   const msgM = document.getElementById('msg-mobile');
   const success = document.getElementById('device-success');
+  const explain = document.getElementById('explain-device');
   const hint = document.getElementById('device-hint');
   const cD = document.getElementById('check-desktop');
   const cT = document.getElementById('check-tablet');
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (visited.desktop && visited.tablet && visited.mobile) {
       success.style.display = 'block';
+      if (explain) explain.style.display = 'flex';
       if (hint) hint.textContent = 'Semua tampilan dikunjungi. Orientasi terakhir: ' + ori + '.';
     } else if (hint) {
       const missing = [];
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   resetBtn.addEventListener('click', function() {
     visited.desktop = false; visited.tablet = false; visited.mobile = false;
     success.style.display = 'none';
+    if (explain) explain.style.display = 'none';
     update();
   });
   update();

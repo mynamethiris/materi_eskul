@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 03, mudah</span>
           <h1 class="page-title">Bypass Disabled Button</h1>
           <p class="lead">Tombol hadiah dikunci dengan atribut <code>disabled</code>. Hapus atribut itu lewat Elements, lalu klik tombolnya.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: tombol tidak bisa diklik</h4><p><strong>Masalah:</strong> tombol hadiah terlihat tapi tidak bisa diklik, status masih terkunci.<br><strong>Yang dikerjakan:</strong> periksa tombol itu di panel Elements, cari info tambahan yang menguncinya, hilangkan sampai status berubah aktif, lalu klik tombolnya.<br>Tag HTML bisa membawa info tambahan yang mengubah perilaku, seperti saklar.<br><strong>Kesalahan umum:</strong> hanya klik tombol tanpa membuka kunci, hapus teks tombol bukan atributnya.</p></div>
+          </div>
           <div id="disabled-success" class="success" role="status" aria-live="polite">Mantap! Kamu berhasil bypass tombol disabled dan mengklaim hadiah. Pelajarannya: validasi penting harus di server, bukan cuma disabled di HTML.</div>
+          <div id="explain-disabled" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: atribut disabled</h4><p><strong>Kode:</strong> <code>&lt;button disabled&gt;</code> artinya tombol digembok. Selama kata <code>disabled</code> menempel, tombol tidak bisa diklik.<br><strong>Masalah:</strong> tombol <code>#claim-btn</code> terkunci.<br><strong>Solusi:</strong> klik kanan kata <code>disabled</code>, hapus atributnya, lalu klik tombol hadiah.<br><strong>Kenapa penting:</strong> kunci di tampilan mudah dibuka, jadi aturan penting harus dijaga di server.<br><strong>Coba lagi:</strong> tekan Kunci lagi, buka tanpa membuka hint.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Tombol hadiah terlihat tapi tidak bisa diklik. Inspect tombol itu: atribut apa yang membuatnya terkunci?</p></li>

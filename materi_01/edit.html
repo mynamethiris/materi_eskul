@@ -45,7 +45,15 @@
           <span class="badge badge-outline">Tantangan 01, paling mudah</span>
           <h1 class="page-title">Ubah Judul dan Deskripsi</h1>
           <p class="lead">Ganti teks dua elemen lewat panel Elements. Halaman memeriksa tiap 400ms dan menampilkan pesan khusus tantangan ini.</p>
+          <div class="alert">
+            <span class="alert-icon" aria-hidden="true">i</span>
+            <div><h4>Panduan dasar: teks halaman web</h4><p><strong>Masalah:</strong> dua teks di kotak Tujuan masih teks lama, belum sesuai permintaan.<br><strong>Yang dikerjakan:</strong> temukan bagian yang membungkus dua teks itu di panel Elements, lalu ubah isinya sampai sama persis dengan tulisan di kotak Tujuan.<br>Halaman web tersusun dari kotak-kotak teks, seperti kotak teks di poster.<br><strong>Kesalahan umum:</strong> hanya ubah satu teks, beda spasi atau tanda seru, lupa tekan Enter.</p></div>
+          </div>
           <div id="success-message" class="success" role="status" aria-live="polite">Bagus! Judul dan deskripsi sudah benar. Kamu paham cara mengubah teks lewat Elements.</div>
+          <div id="explain-edit" class="alert alert-success" style="display:none">
+            <span class="alert-icon" aria-hidden="true">✓</span>
+            <div><h4>Pembahasan: tag p dan h2</h4><p><strong>Kode:</strong> <code>&lt;p&gt;</code> wadah paragraf, <code>&lt;h2&gt;</code> wadah judul bagian. Atribut <code>id</code> seperti <code>id="target-title"</code> jadi nama unik biar gampang dicari. Analoginya seperti nomor kursi.<br><strong>Masalah:</strong> dua teks masih teks lama.<br><strong>Solusi:</strong> cari <code>#target-title</code> dan <code>#target-desc</code>, klik dua kali teksnya, ketik teks tujuan, tekan Enter.<br><strong>Kenapa penting:</strong> banyak info situs tampil lewat teks HTML, jadi bisa cek cepat tampilan tanpa buka file.<br><strong>Coba lagi:</strong> ganti judul dengan namamu sendiri, refresh, lihat kembali ke awal karena perubahan hanya lokal.</p></div>
+          </div>
           <div class="steps" aria-label="Langkah pengerjaan">
             <ol>
               <li><span class="step-num">?</span><p>Buka DevTools. Perhatikan kotak target: ada judul dan deskripsi yang terlihat “lama”. Menurutmu, teks seperti apa yang pantas jadi penggantinya? <strong>Targetnya tertulis di kotak “Tujuan” di bawah.</strong></p></li>
